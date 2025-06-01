@@ -1,0 +1,162 @@
+summary {
+    padding: 20px;
+    margin: 20px;
+    border: solid 2px #444;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.circulo {
+    width: 120px;
+    height: 120px;
+    color: white;
+    padding: 30px;
+    margin: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    border: solid 2px black;
+}
+
+.static {
+    background-color: blue;
+    position: static;
+}
+
+.relative {
+    background-color: grey;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.absolute-container {
+    position: relative;
+    background-color: #b8b8b8;
+    padding: 20px;
+    height: 150px;
+}
+
+.absolute {
+    background-color: red;
+    position: absolute;
+    top: 25px;
+    left: 50px;
+}
+
+.fixed {
+    background-color: green;
+    position: fixed;
+    top: 250px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.contenedor-flotantes {
+    width: 600px;
+    border: 2px solid #444;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.caja-float {
+    width: 150px;
+    height: 150px;
+    color: white;
+    text-align: center;
+    line-height: 150px;
+    margin: 10px;
+}
+
+.izquierda {
+    float: left;
+    background-color: rgb(2, 245, 245);
+}
+
+.derecha {
+    float: right;
+    background-color: rgb(240, 75, 47);
+}
+
+.contenido-flotantes {
+    background-color: #ddd;
+    padding: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+.div-block {
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    margin: 10px;
+}
+
+.div-inline {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    margin: 10px;
+    display: inline;
+}
+
+.div-inline-block {
+    padding: 5px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    margin: 10px;
+    display: inline-block;
+}
+
+.contenedor-overflow {
+    width: 300px;
+    height: 150px;
+    border: 3px solid #333;
+    margin: 50px auto;
+    padding: 15px;
+    overflow: auto;
+    background-color: #f0f0f0;
+}
+
+.contenido-overflow {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.botones {
+    text-align: center;
+}
+
+.caja-oculta {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 50px;
+    visibility: visible;
+}
+
+.caja-z-index {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.roja-z-index {
+    background-color: red;
+    top: 700px;
+    left: 1050px;
+    z-index: 0;
+}
+
+.azul-z-index {
+    background-color: blue;
+    top: 650px;
+    left: 1000px;
+    z-index: 1;
+}

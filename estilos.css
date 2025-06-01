@@ -1,9 +1,9 @@
-.estiloPortada{
+.estilo-portada{
     text-align: center;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.PaddingBorderMargin{
+.padding-order-margin{
     padding: 30px;
       background-color: grey; /* Este color también se verá en el área del padding */
       border: 10px solid red;
@@ -13,16 +13,16 @@
       margin: 50px;
       text-align: center;
 }
-.estiloConBordes{
+.estilo-con-bordes{
     border: solid 2px;
     border-color: blue;
 }
-.parrafoEnLinea{
+.parrafo-en-linea{
     display: inline;
     border: solid 2px;
     border-color: blue;
 }
-.spanEnBloque{
+.span-en-bloque{
     display: block;
     border: solid 2px;
     border-color: blue;

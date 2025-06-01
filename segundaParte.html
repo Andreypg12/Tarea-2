@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda parte</title>
+    <link rel="stylesheet" href="estilos2.css">
+    <link rel="stylesheet" href="funciones.js">
+</head>
+
+<body>
+    <details>
+        <summary>Explicación de como funciona la propiedad "Position"</summary>
+        <ul>
+            <li><strong>Static:</strong> Simplemente se queda en el lugar donde es ubicado y no se mueve</li>
+
+            <li><strong>Relative:</strong> Se queda en el lugar donde es ubicado, pero se puede desplazar con las
+                propiedades top, bottom,
+                left y right</li>
+
+            <li><strong>Absolute:</strong> Se queda en el lugar donde es ubicado, pero se puede desplazar con las
+                propiedades top, bottom,
+                left y right,
+                <br> y se posiciona respecto al elemento padre más cercano que tenga position: relative
+            </li>
+
+            <li><strong>Fixed:</strong> Se queda en el lugar donde es ubicado, pero se puede desplazar con las
+                propiedades
+                top, bottom, left
+                y right,
+                <br> y se posiciona respecto a la ventana del navegador, por lo que no se mueve al hacer scroll
+            </li>
+        </ul>
+        <div class="circulo static">Static</div>
+
+        <div class="circulo relative">Relative</div>
+
+        <div class="absolute-container">
+            Contenedor con <code>position: relative</code>
+
+            <div class="circulo absolute">Absolute</div>
+
+        </div>
+
+        <div class="circulo fixed">Fixed</div>
+
+    </details>
+
+    <details>
+        <summary>Explicación de como funciona las propiedades "Float" y "Clear"</summary>
+
+        <p>Las propiedades <code>float</code> y <code>clear</code> se utilizan para controlar el flujo de los elementos
+            en
+            CSS <br>
+            como podemos ver en la siguiente representación tenemos 2 cuadros flotando a la izquierda y a la derecha del
+            texto del medio</p>
+        <div class="contenedor-flotantes">
+            <div class="caja-float izquierda">Izquierda</div>
+            <div class="caja-float derecha">Derecha</div>
+
+            <div class="contenido-flotantes">
+                <p>Este contenido se intenta colocar debajo de las cajas flotantes, pero no lo hace porque no se usa el
+                    <code>clear</code>.
+                </p>
+            </div>
+
+            <div class="clear"></div>
+
+            <p>Este párrafo si se coloca abajo gracias a usar el <code>clear: both;</code>
+                ya que no permite que haya nada flotado a los lados.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Explicación de como funciona la propiedad "Display"</summary>
+
+        <div class="div-block">Este es un &lt;div&gt; que por defecto es con un <code>display block</code>
+            <br>(usa el espacio de lado a lado de la pantalla, aunque no lo este ocupando)
+        </div>
+
+        <div class="div-inline">Este es un &lt;div&gt; que con un <code>display inline</code> (solo va usar lo que
+            ocupe)
+        </div>
+
+        <div class="div-inline">Como podemos ver, si ponemos otro elemento <code>inline</code> se coloca al lado y no
+            debajo
+        </div>
+        <br><br>
+        <div class="div-inline-block">Este es un &lt;div&gt; que con un <code>display inline-block</code>
+            <br> (ocupa solo lo que necesita, pero se comporta como un bloque)
+        </div>
+    </details>
+
+    <details>
+        <summary>Explicación de como funciona la propiedad "Overflow"</summary>
+
+
+        <div id="contenedor-overflow" class="contenedor-overflow">
+            <div class="contenido-overflow">
+                Este es un contenido que se puede desbordar del contenedor. Observa cómo cambia el comportamiento del
+                desbordamiento dependiendo del valor de <code>overflow</code>. Toca los botones de abajo que representan
+                los
+                diferentes valores del
+                <code>overflow</code> y mira el comportamiento de cada uno de ellos.
+            </div>
+        </div>
+
+        <div class="botones">
+            <button onclick="cambiarOverflow('auto')">auto</button>
+            <button onclick="cambiarOverflow('visible')">visible</button>
+            <button onclick="cambiarOverflow('hidden')">hidden</button>
+            <button onclick="cambiarOverflow('scroll')">scroll</button>
+        </div>
+    </details>
+
+    <details>
+        <summary>Explicación de como funciona la propiedad "Visibility"</summary>
+
+        <p>En siguiente ejemplo tenemos una caja con <code>visibility: visible;</code>,cada vez que toquemos el botón
+            estaremos cambiando el valor de "visible" a "hidden" y viceversa, como vemos, auque esté oculto sigue
+            ocupando el espacio</p>
+
+        <div id="cajaOculta" class="caja-oculta"></div>
+
+        <button onclick="cambiarVisibilidad()">Mostrar/Ocultar caja</button>
+
+        <br><br><br>
+        <p>Ahora tenemos una tabla que es donde se suele usar el collapse y hay un elemento que es colapsable, y con el
+            botón podremos ir intercambiando este valor.</p>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>25</td>
+            </tr>
+            <tr id="fila-colapsable">
+                <td>Carlos</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Lucía</td>
+                <td>28</td>
+            </tr>
+        </table>
+        <button onclick="cambiarColapaso()">Mostrar/Ocultar nombre</button>
+    </details>
+
+    <details>
+        <summary>Explicación de como funciona la propiedad "z-index"</summary>
+
+        <p>El <code>z-index</code> funciona que entre mas alto sea el valor, va estar más alfrente de los demas elementos y entre más bajo más atras.
+            <br>En el siguiente ejemplo con el boton podremos ir alternando los cuadros para que se vaya poniendo uno encima del otro, <br>
+             y esto lo logramos cambiando el valor de 1 a 0 y viceversa</p>
+        <div class="caja-z-index roja-z-index" id="cajaRoja"></div>
+        <div class="caja-z-index azul-z-index" id="cajaAzul"></div>
+
+        <button onclick="cambiarZIndex()">Cambiar Z-Index</button>
+
+    </details>
+
+    <script src="funciones.js"></script>
+</body>
+<footer>
+    <br><br><br><br>
+    <a href="index.html">Salir a la página principal</a>
+</footer>
+
+</html>
