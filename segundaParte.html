@@ -117,7 +117,7 @@
     <details>
         <summary>Explicación de como funciona la propiedad "Visibility"</summary>
 
-        <p>En siguiente ejemplo tenemos una caja con <code>visibility: visible;</code>,cada vez que toquemos el botón
+        <p>En siguiente ejemplo tenemos una caja con <code>visibility: visible;</code> cada vez que toquemos el botón
             estaremos cambiando el valor de "visible" a "hidden" y viceversa, como vemos, auque esté oculto sigue
             ocupando el espacio</p>
 
@@ -152,11 +152,16 @@
     <details>
         <summary>Explicación de como funciona la propiedad "z-index"</summary>
 
-        <p>El <code>z-index</code> funciona que entre mas alto sea el valor, va estar más alfrente de los demas elementos y entre más bajo más atras.
-            <br>En el siguiente ejemplo con el boton podremos ir alternando los cuadros para que se vaya poniendo uno encima del otro, <br>
-             y esto lo logramos cambiando el valor de 1 a 0 y viceversa</p>
-        <div class="caja-z-index roja-z-index" id="cajaRoja"></div>
-        <div class="caja-z-index azul-z-index" id="cajaAzul"></div>
+        <p>El <code>z-index</code> lo que hace es que entre más alto sea el valor, va estar más alfrente de los demás
+            elementos y entre más bajo, más atrás.
+            <br>En el siguiente ejemplo con el botón podremos ir alternando los cuadros, para que se vaya poniendo uno
+            alfrente del otro, <br>
+            y esto lo logramos cambiando el valor de 1 a 0 y viceversa.
+        </p>
+        <div class="contenedor-z-index">
+            <div class="caja-z-index roja-z-index" id="cajaRoja"></div>
+            <div class="caja-z-index azul-z-index" id="cajaAzul"></div>
+        </div>
 
         <button onclick="cambiarZIndex()">Cambiar Z-Index</button>
 
@@ -165,8 +170,7 @@
     <script src="funciones.js"></script>
 </body>
 <footer>
-    <br><br><br><br>
-    <a href="index.html">Salir a la página principal</a>
+    <a class="enlace-inicio" href="index.html">Salir a la página principal</a>
 </footer>
 
 </html>

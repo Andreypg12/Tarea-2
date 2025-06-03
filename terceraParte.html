@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="estilos3.css">
+</head>
+
+<body>
+    <h1 style="text-align: center;">Flex Container</h1>
+
+    <h2>En el siguiente contenedor, que está definido con <code>display: flex;</code> podemos ver 3 cajas adentro,<br>
+        con estas cajas y las opciones de abajo, podremos ir intercambiando los distintos valores de los flex
+        containers,<br>
+        y con esto, ver los distintos comportamientos que tienen las propiedades con estas cajas</h2>
+
+    <div id="contenedor" class="contenedorGrande">
+        <div id="caja1" class="caja">1</div>
+        <div id="caja2" class="caja">2</div>
+        <div id="caja3" class="caja">3</div>
+    </div>
+
+    <div class="contenedorControles">
+        <h2>Flex-direction:</h2>
+        <select onchange="cambiar('flexDirection', this.value)">
+            <option value="row">row</option>
+            <option value="row-reverse">row-reverse</option>
+            <option value="column">column</option>
+            <option value="column-reverse">column-reverse</option>
+        </select>
+
+        <h2>Flex-wrap:</h2>
+        <select onchange="cambiar('flexWrap', this.value)">
+            <option value="wrap">wrap</option>
+            <option value="nowrap">nowrap</option>
+            <option value="wrap-reverse">wrap-reverse</option>
+        </select>
+
+        <h2>justify-content:</h2>
+        <select onchange="cambiar('justifyContent', this.value)">
+            <option value="flex-start">flex-start</option>
+            <option value="center">center</option>
+            <option value="flex-end">flex-end</option>
+            <option value="space-between">space-between</option>
+            <option value="space-around">space-around</option>
+            <option value="space-evenly">space-evenly</option>
+        </select>
+
+        <h2>align-items:</h2>
+        <select onchange="cambiar('alignItems', this.value)">
+            <option value="stretch">stretch</option>
+            <option value="flex-start">flex-start</option>
+            <option value="center">center</option>
+            <option value="flex-end">flex-end</option>
+            <option value="baseline">baseline</option>
+        </select>
+
+        <h2>align-content:</h2>
+        <select onchange="cambiar('alignContent', this.value)">
+            <option value="stretch">stretch</option>
+            <option value="flex-start">flex-start</option>
+            <option value="center">center</option>
+            <option value="flex-end">flex-end</option>
+            <option value="space-between">space-between</option>
+            <option value="space-around">space-around</option>
+        </select>
+    </div>
+
+    <div class="contenedorControles">
+        <h2
+            title="Lo que hace es, que el elemento entre más grande sea el número del flex-grow, más va a tener que crecer con respecto a los demás. En este ejemplo estamos cambiando ese valor de la caja2 de 1 a 0 y viceversa.">
+            flex-grow:
+        </h2>
+        <button onclick="cambiarFlexGrow()">Cambiar</button>
+
+        <h2
+            title="El flex-basis determina el tamaño inicial que va a tener la caja, en este ejemplo se cambia el valor de 150px a 200px y viceversa.">
+            flex-basis:
+        </h2>
+        <button onclick="cambiarFlexBasis()">Cambiar</button>
+    </div>
+
+    <h1>Explicación algunos de los elementos:</h1>
+    <ul style="width: 50%;">
+        <li><strong>flex-flow:</strong> El flex-flow lo que hace es combinar el flex-direction con el flex-wrap, podemos
+            poner
+            <code>flex-flow: row wrap;</code>
+            y de esa forma hacer la combinación que queramos.
+        </li>
+        <li><strong>order:</strong> En el codigo de esta página se hizo caja1, caja2, caja3 en ese orden, pero se
+            invirtio usando el
+            order para que a nivel visual
+            se vea primero la caja3, luego la caja2 y por último la caja1. El order es un número, y el que tenga el
+            número más bajo va a aparecer primero.
+        </li>
+        <li><strong>flex-shrink:</strong> La propiedad flex-shrink controla cuánto puede
+            encogerse un ítem dentro de un contenedor flex cuando el espacio disponible es limitado, si tenemos
+            un elemento con este valor en 0 no se encogerá, si está en 1 se encogerá normal, y entre más alto sea el
+            número
+            cada vez se concogerá más rápido.
+        </li>
+        <li><strong>align-self:</strong> La propiedad aling-self permite sobrescribir el valor de align-items para un ítem específico.
+        </li>
+    </ul>
+
+    <h1>¿Que significa el "Flex Responsive"?</h1>
+    <p>El flex responsive no es una propiedad, es un enfoque o técnica que aprovecha Flexbox para lograr diseños adaptativos o responsivos,<br>
+        lo que logra que las páginas se ajusten automáticamente al tamaño de la pantalla (como en celulares, tablets o computadoras).
+
+</p>
+    <script src="funcionesTerceraParte.js"></script>
+</body>
+<footer>
+    <a class="enlace-inicio" href="index.html">Salir a la página principal</a>
+</footer>
+
+</html>
